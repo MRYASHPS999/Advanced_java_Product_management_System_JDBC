@@ -91,7 +91,7 @@ public class ProductDao {
 
 		connection = helperClass.getConnection();
 
-		String sql = "SELECT * FROM product WHERE id=?";
+		String sql = "SELECT * FROM product WHERE product_id=?";
 
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -163,7 +163,7 @@ public class ProductDao {
 
 	public boolean deleteProductById(int product_id) {
 		connection = helperClass.getConnection();
-		String sql = "DELETE FROM product WHERE id=?";
+		String sql = "DELETE FROM product WHERE product_id=?";
 		int i = 0;
 
 		try {

@@ -92,7 +92,7 @@ public class CustomerDao {
 
 		connection = helperClass.getConnection();
 
-		String sql = "SELECT * FROM customer WHERE id=?";
+		String sql = "SELECT * FROM customer WHERE c_id=?";
 
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -132,7 +132,7 @@ public class CustomerDao {
 	// To update the data
 	public boolean updateCustomerById(int c_id) {
 		connection = helperClass.getConnection();
-		String sql = "UPDATE customer SET c_name='dummy4',c_email='dummy4@mail.com',phone_no=1234567890 WHERE id=?";
+		String sql = "UPDATE customer SET c_name='dummy4',c_email='dummy4@mail.com',phone_no=1234567890 WHERE c_id=?";
 		int i = 0;
 
 		try {
@@ -164,7 +164,7 @@ public class CustomerDao {
 
 	public boolean deleteCustomerById(int c_id) {
 		connection = helperClass.getConnection();
-		String sql = "DELETE FROM customer WHERE id=?";
+		String sql = "DELETE FROM customer WHERE c_id=?";
 		int i = 0;
 
 		try {
